@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style type="text/css" media="screen">
       /* Reset browser settings */
       * {
@@ -77,7 +78,7 @@
   </head>
   <body>
     <h1>Live Ad</h1>
-    <form>
+    <form action="/login" method="post">
       <input name="username"
              placeholder="Username"
              required="required"

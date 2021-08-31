@@ -14,5 +14,5 @@ fn info() -> &'static str {
 fn launch() -> _ {
     rocket::build()
         .attach(Template::fairing())
-        .mount("/", routes![info, login::index])
+        .mount("/", routes![info, login::index, login::login_action])
 }
