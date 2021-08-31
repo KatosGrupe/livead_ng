@@ -1,0 +1,9 @@
+<html>
+<body>
+  <form>
+    <input name="username" type="text">
+    <input name="password" type="text">
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>

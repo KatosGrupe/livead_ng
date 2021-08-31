@@ -1,4 +1,9 @@
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
+
+use rocket_dyn_templates::Template;
+
+mod login;
 
 #[get("/info")]
 fn info() -> &'static str {
@@ -7,5 +12,7 @@ fn info() -> &'static str {
 
 #[launch]
 fn launch() -> _ {
-    rocket::build().mount("/", routes![info])
+    rocket::build()
+        .attach(Template::fairing())
+        .mount("/", routes![info, login::index])
 }
