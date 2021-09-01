@@ -2,11 +2,8 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/public/css/browser_reset.css" media="screen" />
-    <style type="text/css" media="screen">
-      body {
-          max-width: 450px;
-          margin: 40px auto;
-      }
+    <link rel="stylesheet" type="text/css" href="/public/css/base.css" media="screen" />
+    <style>
     </style>
   </head>
   <body>

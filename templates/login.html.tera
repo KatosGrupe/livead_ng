@@ -2,26 +2,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/public/css/browser_reset.css" media="screen" />
-    <style type="text/css" media="screen">
-      body {
-          font-family: Sans-Serif;
-          background-color: #DFD;
-          margin: 0 auto;
-          max-width: 450px;
-      }
-
+    <link rel="stylesheet" type="text/css" href="/public/css/base.css" media="screen" />
+    <style>
       h1 {
-          margin: 70px 0;
-          text-align: center;
           font-size: 4em;
+          margin: 70px 0;
       }
-
-      input {
-          display: block;
-          font-size: 16px;
-          width: 100%;
-      }
-    </style>
+      </style>
   </head>
   <body>
     <h1>Live Ad</h1>
