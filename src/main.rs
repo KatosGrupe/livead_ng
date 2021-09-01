@@ -5,6 +5,7 @@ use rocket::fs::FileServer;
 use rocket_dyn_templates::Template;
 
 mod login;
+mod text;
 mod user;
 
 #[get("/info")]
@@ -16,6 +17,15 @@ fn info() -> &'static str {
 fn launch() -> _ {
     rocket::build()
         .attach(Template::fairing())
-        .mount("/", routes![info, login::index, login::login_action])
+        .mount(
+            "/",
+            routes![
+                info,
+                login::index,
+                login::login_action,
+                text::index,
+                text::index_unauthorized
+            ],
+        )
         .mount("/public", FileServer::from("./static"))
 }

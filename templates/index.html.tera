@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/public/css/browser_reset.css" media="screen" />
+    <style type="text/css" media="screen">
+      body {
+          max-width: 450px;
+          margin: 40px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INDEX</h1>
+    <table>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+      {% for item in values %}
+      <tr>
+        <td>{{item.key}}</td>
+        <td>{{item.value}}</td>
+      {% endfor %}
+    </table>
+  </body>
+</html>
