@@ -23,8 +23,10 @@ fn launch() -> _ {
                 info,
                 login::index,
                 login::login_action,
+                text::edit,
+                text::edit_action,
                 text::index,
-                text::index_unauthorized
+                text::index_unauthorized,
             ],
         )
         .mount("/public", FileServer::from("./static"))

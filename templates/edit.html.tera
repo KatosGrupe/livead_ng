@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/public/css/browser_reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/public/css/base.css" media="screen" />
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1>Edit entry: {{ key }}</h1>
+    <form action="/edit/{{key}}" method="post">
+      <label for="key">Key</label>
+      <input name="key"
+             type="text"
+             value="{{key}}">
+      <label for="key">Value</label>
+      <input name="value"
+             type="text"
+             value="{{value}}">
+      <input type="submit"
+             value="Save">
+    </form>
+
+  </body>
+</html>
