@@ -23,6 +23,6 @@ pub struct Credentials {
 #[post("/login", data = "<credentials>")]
 pub fn login_action(credentials: Form<Credentials>, cookies: &CookieJar<'_>) -> Redirect {
     println!("{:#?}", credentials);
-    cookies.add_private(Cookie::new("user_id", credentials.username.to_string()));
+    cookies.add_private(Cookie::new("user_id", "-1"));
     Redirect::to(uri!("/"))
 }
