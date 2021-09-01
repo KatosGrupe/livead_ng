@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate rocket;
 
+use rocket::fs::FileServer;
 use rocket_dyn_templates::Template;
 
 mod login;
@@ -16,4 +17,5 @@ fn launch() -> _ {
     rocket::build()
         .attach(Template::fairing())
         .mount("/", routes![info, login::index, login::login_action])
+        .mount("/public", FileServer::from("./static"))
 }
