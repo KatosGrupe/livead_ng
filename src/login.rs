@@ -1,4 +1,6 @@
 use rocket::form::Form;
+use rocket::http::Cookie;
+use rocket::http::CookieJar;
 use rocket::response::Redirect;
 use rocket::serde::{Deserialize, Serialize};
 use rocket_dyn_templates::Template;
@@ -19,8 +21,8 @@ pub struct Credentials {
 }
 
 #[post("/login", data = "<credentials>")]
-pub fn login_action(credentials: Form<Credentials>) -> Redirect {
+pub fn login_action(credentials: Form<Credentials>, cookies: &CookieJar<'_>) -> Redirect {
     println!("{:#?}", credentials);
-
-    Redirect::to(uri!("/login"))
+    cookies.add_private(Cookie::new("user_id", credentials.username.to_string()));
+    Redirect::to(uri!("/"))
 }

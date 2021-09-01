@@ -4,6 +4,7 @@ extern crate rocket;
 use rocket_dyn_templates::Template;
 
 mod login;
+mod user;
 
 #[get("/info")]
 fn info() -> &'static str {
