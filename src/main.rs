@@ -25,6 +25,7 @@ fn launch() -> _ {
                 login::login_action,
                 text::edit,
                 text::edit_action,
+                text::get_values,
                 text::index,
                 text::index_unauthorized,
             ],

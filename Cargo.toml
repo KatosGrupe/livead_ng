@@ -7,5 +7,5 @@ edition = "2018"
 
 [dependencies]
 serde = ""
-rocket = { features = ["secrets"], version = "0.5.0-rc.1" }
+rocket = { features = ["json", "secrets"], version = "0.5.0-rc.1" }
 rocket_dyn_templates = { features = ["tera"], version = "0.1.0-rc.1" }
